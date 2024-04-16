@@ -1,18 +1,17 @@
-# Template Extension Specification
+# Altimetry Extension Specification
 
-- **Title:** Template
-- **Identifier:** <https://stac-extensions.github.io/template/v1.0.0/schema.json>
-- **Field Name Prefix:** template
+- **Title:** Altimetry
+- **Identifier:** <https://stac-extensions.github.io/altimetry/v1.0.0/schema.json>
+- **Field Name Prefix:** altm
 - **Scope:** Item, Collection
 - **Extension [Maturity Classification](https://github.com/radiantearth/stac-spec/tree/master/extensions/README.md#extension-maturity):** Proposal
-- **Owner**: @your-gh-handles @person2
+- **Owner**: @emmanuelmathot
 
-This document explains the Template Extension to the [SpatioTemporal Asset Catalog](https://github.com/radiantearth/stac-spec) (STAC) specification.
-This is the place to add a short introduction.
+This document explains the [Altimetry](https://www.aviso.altimetry.fr/en/techniques/altimetry/principle.html) Extension 
+to the [SpatioTemporal Asset Catalog](https://github.com/radiantearth/stac-spec) (STAC) specification.
 
 - Examples:
-  - [Item example](examples/item.json): Shows the basic usage of the extension in a STAC Item
-  - [Collection example](examples/collection.json): Shows the basic usage of the extension in a STAC Collection
+  - [Sentinel-3 example](examples/sentinel3.json): Shows the basic usage of the extension in a STAC Item with Sentinel-3 data.
 - [JSON Schema](json-schema/schema.json)
 - [Changelog](./CHANGELOG.md)
 
@@ -21,41 +20,29 @@ This is the place to add a short introduction.
 The fields in the table below can be used in these parts of STAC documents:
 
 - [ ] Catalogs
-- [x] Collections
+- [ ] Collections
 - [x] Item Properties (incl. Summaries in Collections)
-- [x] Assets (for both Collections and Items, incl. Item Asset Definitions in Collections)
+- [ ] Assets (for both Collections and Items, incl. Item Asset Definitions in Collections)
 - [ ] Links
 
-| Field Name           | Type                      | Description                                  |
-| -------------------- | ------------------------- | -------------------------------------------- |
-| template:new_field   | string                    | **REQUIRED**. Describe the required field... |
-| template:xyz         | [XYZ Object](#xyz-object) | Describe the field...                        |
-| template:another_one | \[number]                 | Describe the field...                        |
+| Field Name         | Type                                                                                     | Description                                                                                                                                                                           |
+| ------------------ | ---------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| altm:ins_type      | string                                                                                   | Primary instrument type. See the list of [primary instrument types](#primary-instrument-types).                                                                                       |
+| altm:ins_mode      | string                                                                                   | Instrument mode.                                                                                                                                                                      |
+| altm:sampling_rate | number                                                                                   | Sampling rate of the instrument in Hz.                                                                                                                                                |
+| altm:nominal_track | [GeoJSON LineString Object](https://datatracker.ietf.org/doc/html/rfc7946#section-3.1.4) | A geometry used to define the nominal track on the earths surface. This track is essentially a line that is representative of the product but does not include points for every value |
 
-### Additional Field Information
+### Primary Instrument Types
 
-#### template:new_field
+The following values are valid for the `altm:ins_type` field:
 
-This is a much more detailed description of the field `template:new_field`...
-
-### XYZ Object
-
-This is the introduction for the purpose and the content of the XYZ Object...
-
-| Field Name | Type   | Description                                  |
-| ---------- | ------ | -------------------------------------------- |
-| x          | number | **REQUIRED**. Describe the required field... |
-| y          | number | **REQUIRED**. Describe the required field... |
-| z          | number | **REQUIRED**. Describe the required field... |
-
-## Relation types
-
-The following types should be used as applicable `rel` types in the
-[Link Object](https://github.com/radiantearth/stac-spec/tree/master/item-spec/item-spec.md#link-object).
-
-| Type           | Description                           |
-| -------------- | ------------------------------------- |
-| fancy-rel-type | This link points to a fancy resource. |
+| Value     | Description              |
+| --------- | ------------------------ |
+| sar       | Synthetic Aperture Radar |
+| doppler   | Doppler                  |
+| laser     | Laser                    |
+| microwave | Microwave Radiometer     |
+| other     |                          |
 
 ## Contributing
 

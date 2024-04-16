@@ -1,0 +1,119 @@
+{
+  "type": "Feature",
+  "stac_version": "1.0.0",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/altimetry/v1.0.0/schema.json",
+    "https://stac-extensions.github.io/sat/v1.0.0/schema.json"
+  ],
+  "id": "S3A_SR_2_LAN_LI_20240415T101037_20240415T101142_20240415T122248_0064_111_179______PS1_O_NR_005.SEN3",
+  "collection": "sentinel3",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          6.6876,
+          46.8791
+        ],
+        [
+          5.95611,
+          44.9923
+        ],
+        [
+          5.26247,
+          43.102
+        ],
+        [
+          5.26485,
+          43.1016
+        ],
+        [
+          5.95856,
+          44.9919
+        ],
+        [
+          6.69013,
+          46.8786
+        ],
+        [
+          6.6876,
+          46.8791
+        ]
+      ]
+    ]
+  },
+  "properties": {
+    "cycle": 111,
+    "sat:absolute_orbit": 42502,
+    "sat:orbit_state": "descending",
+    "created": "2024-04-15T12:15:35+00:00",
+    "processing:level": "2",
+    "processing:facility": "S3 Production Service-ACRI",
+    "processing:software": {
+      "name": "IPF-SM-2-LI",
+      "version": "7.07"
+    },
+    "platform": "sentinel-3a",
+    "instruments": [
+      "SRAL"
+    ],
+    "sat:relative_orbit": 179,
+    "datetime": "2024-04-15T10:10:36.872Z",
+    "end_datetime": "2024-04-15T10:11:41.815Z",
+    "start_datetime": "2024-04-15T10:10:36.872Z",
+    "productType": "SR_2_LAN_LI",
+    "altm:ins_type": "sar",
+    "altm:ins_mode": "hrm",
+    "altm:sampling_rate": 20,
+    "altm:nominal_track": [
+      [
+        6.6876,
+        46.8791
+      ],
+      [
+        5.95611,
+        44.9923
+      ],
+      [
+        5.26247,
+        43.102
+      ],
+      [
+        5.26485,
+        43.1016
+      ],
+      [
+        5.95856,
+        44.9919
+      ],
+      [
+        6.69013,
+        46.8786
+      ],
+      [
+        6.6876,
+        46.8791
+      ]
+    ]
+  },
+  "bbox": [
+    5.26247,
+    43.1016,
+    6.69013,
+    46.8791
+  ],
+  "links": [
+    {
+      "rel": "collection",
+      "type": "application/json",
+      "href": "https://catalogue.dataspace.copernicus.eu/stac/collections/SENTINEL-3"
+    }
+  ],
+  "assets": {
+    "PRODUCT": {
+      "href": "https://catalogue.dataspace.copernicus.eu/odata/v1/Products(fd6d33be-97a3-4d20-9983-6057f28b5dbf)/$value",
+      "title": "Product",
+      "type": "application/octet-stream"
+    }
+  }
+}
