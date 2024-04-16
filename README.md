@@ -30,7 +30,7 @@ The fields in the table below can be used in these parts of STAC documents:
 | altm:ins_type      | string                                                                                   | Primary instrument type. See the list of [primary instrument types](#primary-instrument-types).                                                                                       |
 | altm:ins_mode      | string                                                                                   | Instrument mode.                                                                                                                                                                      |
 | altm:sampling_rate | number                                                                                   | Sampling rate of the instrument in Hz.                                                                                                                                                |
-| altm:nominal_track | [GeoJSON LineString Object](https://datatracker.ietf.org/doc/html/rfc7946#section-3.1.4) | A geometry used to define the nominal track on the earths surface. This track is essentially a line that is representative of the product but does not include points for every value |
+| altm:nominal_track | [GeoJSON LineString Coordinates Array](https://datatracker.ietf.org/doc/html/rfc7946#section-3.1.4) | A geometry used to define the nominal track on the earths surface. This track is essentially a line that is representative of the product but does not include points for every value |
 
 ### Primary Instrument Types
 
