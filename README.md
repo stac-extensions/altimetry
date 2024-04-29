@@ -3,7 +3,7 @@
 - **Title:** Altimetry
 - **Identifier:** <https://stac-extensions.github.io/altimetry/v1.0.0/schema.json>
 - **Field Name Prefix:** altm
-- **Scope:** Item, Collection
+- **Scope:** Item
 - **Extension [Maturity Classification](https://github.com/radiantearth/stac-spec/tree/master/extensions/README.md#extension-maturity):** Proposal
 - **Owner**: @emmanuelmathot
 
