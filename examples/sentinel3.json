@@ -62,8 +62,8 @@
     "end_datetime": "2024-04-15T10:11:41.815Z",
     "start_datetime": "2024-04-15T10:10:36.872Z",
     "productType": "SR_2_LAN_LI",
-    "altm:ins_type": "sar",
-    "altm:ins_mode": "hrm",
+    "altm:instrument_type": "sar",
+    "altm:instrument_mode": "hrm",
     "altm:sampling_rate": 20,
     "altm:nominal_track": [
       [

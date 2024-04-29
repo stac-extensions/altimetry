@@ -67,8 +67,8 @@
     "require_any": {
       "$comment": "Please list all fields here so that we can force the existence of one of them in other parts of the schemas.",
       "anyOf": [
-        {"required": ["altm:ins_type"]},
-        {"required": ["altm:ins_mode"]},
+        {"required": ["altm:instrument_type"]},
+        {"required": ["altm:instrument_mode"]},
         {"required": ["altm:sampling_rate"]},
         {"required": ["altm:nominal_track"]}
       ]
@@ -77,7 +77,7 @@
       "$comment": "Add your new fields here. Don't require them here, do that above in the corresponding schema.",
       "type": "object",
       "properties": {
-        "altm:ins_type": {
+        "altm:instrument_type": {
           "type": "string",
           "description": "Type of altimetry instrument used to collect the data.",
           "enum": [
@@ -88,7 +88,7 @@
             "other"
           ]
         },
-        "altm:ins_mode": {
+        "altm:instrument_mode": {
           "type": "string",
           "description": "Mode of the altimetry instrument used to collect the data."
         },

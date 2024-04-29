@@ -25,16 +25,16 @@ The fields in the table below can be used in these parts of STAC documents:
 - [ ] Assets (for both Collections and Items, incl. Item Asset Definitions in Collections)
 - [ ] Links
 
-| Field Name         | Type                                                                                     | Description                                                                                                                                                                           |
-| ------------------ | ---------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| altm:ins_type      | string                                                                                   | Primary instrument type. See the list of [primary instrument types](#primary-instrument-types).                                                                                       |
-| altm:ins_mode      | string                                                                                   | Instrument mode.                                                                                                                                                                      |
-| altm:sampling_rate | number                                                                                   | Sampling rate of the instrument in Hz.                                                                                                                                                |
-| altm:nominal_track | [GeoJSON LineString Coordinates Array](https://datatracker.ietf.org/doc/html/rfc7946#section-3.1.4) | An array of coordinates used to define the nominal track on the earths surface. This track is essentially a line that is representative of the product but does not include points for every value |
+| Field Name           | Type                                                                                                | Description                                                                                                                                                                                        |
+| -------------------- | --------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| altm:instrument_type | string                                                                                              | Primary instrument type. See the list of [primary instrument types](#primary-instrument-types).                                                                                                    |
+| altm:instrument_mode | string                                                                                              | Instrument mode.                                                                                                                                                                                   |
+| altm:sampling_rate   | number                                                                                              | Sampling rate of the instrument in Hz.                                                                                                                                                             |
+| altm:nominal_track   | [GeoJSON LineString Coordinates Array](https://datatracker.ietf.org/doc/html/rfc7946#section-3.1.4) | An array of coordinates used to define the nominal track on the earths surface. This track is essentially a line that is representative of the product but does not include points for every value |
 
 ### Primary Instrument Types
 
-The following values are valid for the `altm:ins_type` field:
+The following values are valid for the `altm:instrument_type` field:
 
 | Value     | Description              |
 | --------- | ------------------------ |
