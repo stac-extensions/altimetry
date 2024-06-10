@@ -25,12 +25,16 @@ The fields in the table below can be used in these parts of STAC documents:
 - [ ] Assets (for both Collections and Items, incl. Item Asset Definitions in Collections)
 - [ ] Links
 
-| Field Name           | Type                                                                                                | Description                                                                                                                                                                                        |
-| -------------------- | --------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| altm:instrument_type | string                                                                                              | Primary instrument type. See the list of [primary instrument types](#primary-instrument-types).                                                                                                    |
-| altm:instrument_mode | string                                                                                              | Instrument mode.                                                                                                                                                                                   |
-| altm:sampling_rate   | number                                                                                              | Sampling rate of the instrument in Hz.                                                                                                                                                             |
+| Field Name           | Type                                                                                                | Description                                                                                                                                                                                                                                                                                 |
+| -------------------- | --------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| altm:instrument_type | string                                                                                              | Primary instrument type. See the list of [primary instrument types](#primary-instrument-types).                                                                                                                                                                                             |
+| altm:instrument_mode | string                                                                                              | Instrument mode.                                                                                                                                                                                                                                                                            |
+| altm:sampling_rate   | number                                                                                              | Sampling rate of the instrument in Hz.                                                                                                                                                                                                                                                      |
 | altm:nominal_track   | [GeoJSON LineString Coordinates Array](https://datatracker.ietf.org/doc/html/rfc7946#section-3.1.4) | An array of coordinates used to define the nominal track on the earths surface. This track is essentially a line that is representative of the product but does not include points for every value. This value is recommended ONLY if the item geometry is not representative of the track. |
+
+> \[!NOTE]
+> Various fields and objects in this extensions replace [deprecated fields](https://github.com/stac-extensions/sentinel-3/blob/main/deprecated.md) from the [sentinel-3 extension](https://github.com/stac-extensions/sentinel-3).
+> Please see the section sentinel-3 mapping for more information.
 
 ### Primary Instrument Types
 
@@ -43,6 +47,15 @@ The following values are valid for the `altm:instrument_type` field:
 | laser     | Laser                    |
 | microwave | Microwave Radiometer     |
 | other     |                          |
+
+### Sentinel-3 Mapping
+
+The following table shows the mapping between the [deprecated fields](https://github.com/stac-extensions/sentinel-3/blob/main/deprecated.md) in the [Sentinel-3 extension](https://github.com/stac-extensions/sentinel-3) and the fields in the Altimetry extension.
+
+| Sentinel-3 Field Name | Altimetry Field Name   | Altimetry Field Value |
+| --------------------- | ---------------------- | --------------------- |
+| `s3:lrm_mode`         | `altm:instrument_mode` | `lrm`                 |
+| `s3:sar_mode`         | `altm:instrument_mode` | `sar`                 |
 
 ## Contributing
 
