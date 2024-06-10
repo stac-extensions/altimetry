@@ -1,0 +1,111 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://stac-extensions.github.io/altimetry/v0.1.0/schema.json#",
+  "title": "Altimetry Extension",
+  "description": "STAC Altimetry Extension for STAC Items and STAC Collections.",
+  "oneOf": [
+    {
+      "$comment": "This is the schema for STAC Items. Remove this object if this extension only applies to Collections.",
+      "allOf": [
+        {
+          "$ref": "#/definitions/stac_extensions"
+        },
+        {
+          "type": "object",
+          "required": [
+            "type",
+            "properties",
+            "assets"
+          ],
+          "properties": {
+            "type": {
+              "const": "Feature"
+            },
+            "properties": {
+              "allOf": [
+                {
+                  "$ref": "#/definitions/require_any"
+                },
+                {
+                  "$ref": "#/definitions/fields"
+                }
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "$comment": "This is the schema for STAC Collections, or more specifically only Collection Summaries in this case. By default, only checks the existence of the properties, but not the schema of the summaries.",
+      "type": "object",
+      "required": ["type", "summaries"],
+      "properties": {
+        "type": {
+          "const": "Collection"
+        },
+        "summaries": {
+          "$ref": "#/definitions/require_any"
+        }
+      }
+    }
+  ],
+  "definitions": {
+    "stac_extensions": {
+      "type": "object",
+      "required": [
+        "stac_extensions"
+      ],
+      "properties": {
+        "stac_extensions": {
+          "type": "array",
+          "contains": {
+            "const": "https://stac-extensions.github.io/altimetry/v0.1.0/schema.json"
+          }
+        }
+      }
+    },
+    "require_any": {
+      "$comment": "Please list all fields here so that we can force the existence of one of them in other parts of the schemas.",
+      "anyOf": [
+        {"required": ["altm:instrument_type"]},
+        {"required": ["altm:instrument_mode"]},
+        {"required": ["altm:sampling_rate"]},
+        {"required": ["altm:nominal_track"]}
+      ]
+    },
+    "fields": {
+      "$comment": "Add your new fields here. Don't require them here, do that above in the corresponding schema.",
+      "type": "object",
+      "properties": {
+        "altm:instrument_type": {
+          "type": "string",
+          "description": "Type of altimetry instrument used to collect the data.",
+          "enum": [
+            "sar",
+            "doppler",
+            "laser",
+            "microwave",
+            "other"
+          ]
+        },
+        "altm:instrument_mode": {
+          "type": "string",
+          "description": "Mode of the altimetry instrument used to collect the data."
+        },
+        "altm:sampling_rate": {
+          "type": "number",
+          "description": "Sampling rate of the altimetry instrument in Hz."
+        },
+        "altm:nominal_track": {
+          "$ref": "https://geojson.org/schema/LineString.json#/properties/coordinates"
+        }
+      },
+      "patternProperties": {
+        "^(?!altm:)": {
+          "$comment": "Allow any extra fields that are not part of the schema, as long as they don't start with 'altm:'."
+        }
+      },
+      "additionalProperties": false
+    }
+  }
+}
