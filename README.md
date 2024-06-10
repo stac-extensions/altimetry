@@ -1,7 +1,7 @@
 # Altimetry Extension Specification
 
 - **Title:** Altimetry
-- **Identifier:** <https://stac-extensions.github.io/altimetry/v1.0.0/schema.json>
+- **Identifier:** <https://stac-extensions.github.io/altimetry/v0.1.0/schema.json>
 - **Field Name Prefix:** altm
 - **Scope:** Item
 - **Extension [Maturity Classification](https://github.com/radiantearth/stac-spec/tree/master/extensions/README.md#extension-maturity):** Proposal

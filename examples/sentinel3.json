@@ -2,7 +2,7 @@
   "type": "Feature",
   "stac_version": "1.0.0",
   "stac_extensions": [
-    "https://stac-extensions.github.io/altimetry/v1.0.0/schema.json",
+    "https://stac-extensions.github.io/altimetry/v0.1.0/schema.json",
     "https://stac-extensions.github.io/sat/v1.0.0/schema.json"
   ],
   "id": "S3A_SR_2_LAN_LI_20240415T101037_20240415T101142_20240415T122248_0064_111_179______PS1_O_NR_005.SEN3",
