@@ -34,7 +34,7 @@ The fields in the table below can be used in these parts of STAC documents:
 
 > \[!NOTE]
 > Various fields and objects in this extensions replace [deprecated fields](https://github.com/stac-extensions/sentinel-3/blob/main/deprecated.md) from the [sentinel-3 extension](https://github.com/stac-extensions/sentinel-3).
-> Please see the section sentinel-3 mapping for more information.
+> Please see the section [sentinel-3 mapping](#sentinel-3-mapping) for more information.
 
 ### Primary Instrument Types
 
