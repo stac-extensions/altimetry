@@ -33,7 +33,8 @@ The fields in the table below can be used in these parts of STAC documents:
 | altm:nominal_track   | [GeoJSON LineString Coordinates Array](https://datatracker.ietf.org/doc/html/rfc7946#section-3.1.4) | An array of coordinates used to define the nominal track on the earths surface. This track is essentially a line that is representative of the product but does not include points for every value. This value is recommended ONLY if the item geometry is not representative of the track. |
 
 > \[!NOTE]
-> Various fields and objects in this extensions replace [deprecated fields](https://github.com/stac-extensions/sentinel-3/blob/main/deprecated.md) from the [sentinel-3 extension](https://github.com/stac-extensions/sentinel-3).
+> Various fields and objects in this extensions replace [deprecated fields](https://github.com/stac-extensions/sentinel-3/blob/main/deprecated.md)
+> from the [sentinel-3 extension](https://github.com/stac-extensions/sentinel-3).
 > Please see the section [sentinel-3 mapping](#sentinel-3-mapping) for more information.
 
 ### Primary Instrument Types
@@ -50,7 +51,8 @@ The following values are valid for the `altm:instrument_type` field:
 
 ### Sentinel-3 Mapping
 
-The following table shows the mapping between the [deprecated fields](https://github.com/stac-extensions/sentinel-3/blob/main/deprecated.md) in the [Sentinel-3 extension](https://github.com/stac-extensions/sentinel-3) and the fields in the Altimetry extension.
+The following table shows the mapping between the [deprecated fields](https://github.com/stac-extensions/sentinel-3/blob/main/deprecated.md)
+in the [Sentinel-3 extension](https://github.com/stac-extensions/sentinel-3) and the fields in the Altimetry extension.
 
 | Sentinel-3 Field Name | Altimetry Field Name   | Altimetry Field Value |
 | --------------------- | ---------------------- | --------------------- |
