@@ -7,8 +7,17 @@
 - **Extension [Maturity Classification](https://github.com/radiantearth/stac-spec/tree/master/extensions/README.md#extension-maturity):** Proposal
 - **Owner**: @emmanuelmathot
 
-This document explains the [Altimetry](https://www.aviso.altimetry.fr/en/techniques/altimetry/principle.html) Extension 
-to the [SpatioTemporal Asset Catalog](https://github.com/radiantearth/stac-spec) (STAC) specification.
+This document explains the Altimetry Extension to the [SpatioTemporal Asset Catalog](https://github.com/radiantearth/stac-spec) (STAC) specification.
+
+## Scope
+
+[Altimetry](https://www.aviso.altimetry.fr/en/techniques/altimetry/principle.html) is a technique for measuring height.
+Satellite altimetry measures the time taken by a radar pulse to travel from the satellite antenna to the surface and back to the satellite receiver.
+This measurement, combined with precise satellite location data, is used to determine the height of the sea surface or land features.
+This extension defines fields specific to altimetry data products.
+
+The extension distinguishes between different instrument types (including SAR, Doppler, Laser, etc.) 
+and provides fields to describe their characteristics in the context of altimetry observations.
 
 - Examples:
   - [Sentinel-3 example](examples/sentinel3.json): Shows the basic usage of the extension in a STAC Item with Sentinel-3 data.
